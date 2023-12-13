@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body > div {
+    padding: 1em;
+}
+
+#header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: dodgerblue;
+}
+
+#body-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border: 2px black solid;
+    padding: 1em;
+    border-radius:1em;
+    width: 70%;
+    height: 70%;
+    background-color: rgb(220, 220, 220);
+}
+
+#calculator-box div {
+    /* border: 1px lightgray solid; for debugging */
+}
+
+#display-area {
+    display: flex;
+    border: 1px black solid;
+    gap: 1em;px;
+    padding: 1em;
+    background-color: white;
+}
+
+#display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding-right: 15px;
+    font-size: 2em;
+    border-right: 1px darkgray solid;
+}
+
+#buttons-area {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5em;
+    height: 100%;
+}
+
+#buttons-area > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#buttons-area button {
+    width: 100%;
+    border-radius: 6px;
+    font-size: 1.75em;
+    transition-duration: 0.4s;
+}
+
+#digits button:hover,
+#operators button:hover {
+    background-color: rgb(75, 75, 75);
+    color: white;
+}
+#digits div {
+    display: flex;
+    flex: 1;
+    gap: 2%;
+}
+
+#digits {
+    flex: 6;
+    gap: 2%;
+}
+
+#operators,
+#submitters {
+    flex: 1;
+    gap: 2%;
+}
+
+#operators > button {
+    flex: 1;
+    gap: 2%;
+}
+
+#btnClear {
+    flex: 1;
+    background-color: rgb(255, 76, 76);
+}
+
+#btnEquals {
+    flex: 3;
+    background-color: rgb(158, 214, 75);
+}
+
+#footer-container {
+    background-color: dodgerblue;
+}
+
+#title {
+    font-size: 2em;
+    font-weight: 800;
+}
