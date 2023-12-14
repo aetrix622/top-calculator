@@ -8,17 +8,11 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+    background-color: rgb(255, 255, 255);
 }
 
 body > div {
     padding: 1em;
-}
-
-#header-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    background-color: dodgerblue;
 }
 
 #body-container {
@@ -28,14 +22,20 @@ body > div {
     align-items: center;
 }
 
+#footer-container {
+    display: flex;
+    justify-content: center;
+}
+
 #calculator-box {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 3em;
     border: 2px black solid;
     padding: 1em;
     border-radius:1em;
-    width: 70%;
+    width: 80%;
+    max-width: 800px;
     height: 70%;
     background-color: rgb(220, 220, 220);
 }
@@ -62,10 +62,43 @@ body > div {
     border-right: 1px darkgray solid;
 }
 
+#calculator-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+#ctLeft {
+    display: flex;
+    flex-direction: column;
+}
+
+#ctRight {
+    display: flex;
+}
+
+#solarcell {
+    display: flex;
+    background-color: brown;
+    width: 200px;
+    border-left: 2px black solid;
+    border-top: 2px black solid;
+    border-right: 2px gray solid;
+    border-bottom: 2px gray solid;
+}
+
+#solarcell > div {
+    flex:1;
+    border-right: 1px rgb(194, 86, 86) solid;
+}
+
+#solarcell > div:last-child {
+    border-right: 0px;
+}
+
 #buttons-area {
     display: flex;
     justify-content: space-between;
-    gap: 1.5em;
+    gap: 2em;
     height: 100%;
 }
 
@@ -79,14 +112,8 @@ body > div {
     width: 100%;
     border-radius: 6px;
     font-size: 1.75em;
-    transition-duration: 0.4s;
 }
 
-#digits button:hover,
-#operators button:hover {
-    background-color: rgb(75, 75, 75);
-    color: white;
-}
 #digits div {
     display: flex;
     flex: 1;
@@ -119,8 +146,28 @@ body > div {
     background-color: rgb(158, 214, 75);
 }
 
+#digits button:hover,
+#operators button:hover {
+    transition-duration: 0.4s;
+    background-color: rgb(107, 107, 107);
+    color: white;
+}
+
+#btnClear:hover {
+    transition-duration: 0.4s;
+    background-color: rgb(192, 55, 55);
+    color: white
+}
+
+#btnEquals:hover {
+    transition-duration: 0.4s;
+    background-color:rgb(106, 143, 50);
+    color: white;
+}
+
 #footer-container {
     background-color: dodgerblue;
+    color: white;
 }
 
 #title {
