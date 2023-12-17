@@ -13,6 +13,40 @@ window.addEventListener("load", e => {
     inputBuffer.reset();
 });
 
+window.addEventListener("keypress", e => {
+    console.log("KEY PRESSED: " + e.key);
+    const numKeys = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    const opKeys = [
+        {key: "+", func: "btnAdd"},
+        {key: "-", func: "btnSubtract"},
+        {key: "*", func: "btnMultiply"},
+        {key: "/", func: "btnDivide"},
+        {key: "=", func: "btnEquals"},
+        {key: "Enter", func: "btnEquals"},
+    ]
+    if (numKeys.includes(e.key)) {
+        inputBuffer = updateBuffer(e.key, inputBuffer);
+    }
+    if (e.key === ".") {
+        inputBuffer = updateBuffer("decimal", inputBuffer);
+    }
+    if (e.key === "c" || e.key === "C") {
+        clearAll();
+    }
+    if (opKeys.some(el => {
+        // check if keypress is an operator key
+        return e.key === el.key;
+    })) {
+        // find the matching equivalent button, then call the operate function
+        console.log("Operator key detected");
+        let equivButton = opKeys.find(obj => {
+            return obj.key === e.key;
+        });
+        operate(equivButton.func);
+    }
+    updateDisplay(operand, operator, inputBuffer.toString());
+});
+
 buttonList.forEach(button => {
     button.addEventListener("click", e => {
         if (Array.from(button.classList).includes("numberKey")) {
