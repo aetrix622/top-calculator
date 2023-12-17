@@ -1,5 +1,5 @@
 const display = document.querySelector("#display");
-const buttonList = document.querySelectorAll("#buttons-area button");
+const buttonList = document.querySelectorAll("button");
 const MAX_DIGITS = 10;
 let operand = null;
 let operator = "";
@@ -44,6 +44,9 @@ window.addEventListener("keypress", e => {
         });
         operate(equivButton.func);
     }
+    if (e.key === "Delete") {
+        inputBuffer.backspace();
+    }
     updateDisplay(operand, operator, inputBuffer.toString());
 });
 
@@ -67,6 +70,9 @@ buttonList.forEach(button => {
         else if (button.id == "btnClear") {
             clearAll();
         } 
+        else if (button.id == "btnDelete") {
+            inputBuffer.backspace();
+        }
         updateDisplay(operand, operator, inputBuffer.toString());
     });
 });
@@ -109,6 +115,9 @@ let inputBuffer = {
         }
         this.register = s;
     },
+    backspace: function() {
+        this.register.pop();
+    }
 }
 
 const calc = {
