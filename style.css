@@ -136,6 +136,16 @@ body > div {
     gap: 2%;
 }
 
+#operators button {
+    background-color: navy;
+    color: white;
+}
+
+#operators button:hover {
+    transition-duration: 0.4s;
+    background-color: dodgerblue;
+}
+
 #btnClear {
     flex: 1;
     background-color: rgb(255, 76, 76);
@@ -146,8 +156,7 @@ body > div {
     background-color: rgb(158, 214, 75);
 }
 
-#digits button:hover,
-#operators button:hover {
+#digits button:hover {
     transition-duration: 0.4s;
     background-color: rgb(107, 107, 107);
     color: white;
