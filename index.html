@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="./calculator.js" defer></script>
     <title>Calculator</title>
 </head>
 
@@ -32,31 +33,31 @@
             <div id="buttons-area">
                 <div id="digits">
                     <div>
-                        <button id="btnSeven">7</button>
-                        <button id="btnEight">8</button>
-                        <button id="btnNine">9</button>
+                        <button class="numberKey" id="btnSeven">7</button>
+                        <button class="numberKey" id="btnEight">8</button>
+                        <button class="numberKey" id="btnNine">9</button>
                     </div>
                     <div>
-                        <button id="btnFour">4</button>
-                        <button id="btnFive">5</button>
-                        <button id="btnSix">6</button>
+                        <button class="numberKey" id="btnFour">4</button>
+                        <button class="numberKey" id="btnFive">5</button>
+                        <button class="numberKey" id="btnSix">6</button>
                     </div>
                     <div>
-                        <button id="btnOne">1</button>
-                        <button id="btnTwo">2</button>
-                        <button id="btnThree">3</button>
+                        <button class="numberKey" id="btnOne">1</button>
+                        <button class="numberKey" id="btnTwo">2</button>
+                        <button class="numberKey" id="btnThree">3</button>
                     </div>
                     <div>
-                        <button id="btnZero">0</button>
+                        <button class="numberKey" id="btnZero">0</button>
                         <button id="btnDecimal">.</button>
                         <button id="btnNegative">(-)</button>
                     </div>
                 </div>
                 <div id="operators">
-                    <button id="btnDivide">&divide;</button>
-                    <button id="btnMultiply">x</button>
-                    <button id="btnSubtract">-</button>
-                    <button id="btnAdd">+</button>
+                    <button class="operatorKey" id="btnDivide">&divide;</button>
+                    <button class="operatorKey" id="btnMultiply">x</button>
+                    <button class="operatorKey" id="btnSubtract">-</button>
+                    <button class="operatorKey" id="btnAdd">+</button>
                 </div>
                 <div id="submitters">
                     <button id="btnClear">C</button>
